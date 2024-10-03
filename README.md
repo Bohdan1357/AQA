@@ -1,3 +1,1 @@
-//Task5.3 Write a maven command for executing one of your tasks with arguments (number of elements).
-
-mvn clean install exec:java -Dexec.mainClass="task5.Task5Stream" -Dexec.args="6"
+Перестворив репозиторій, трошки впорядкованіше тепер Також виправив таблицю ROI: https://docs.google.com/spreadsheets/d/1vUi-EIqXraRS_9Mi_HoQ4cATxjMBgGbk13CA4S3pKQw/edit?usp=sharing
