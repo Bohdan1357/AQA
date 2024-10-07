@@ -1,4 +1,4 @@
-// General task
+// General task (V12)
 //1. Make up one simple UI end-to-end test case for your test page from Task_10
 //2. Automate that scenario using WebDriver
 //3. Create PageObject (use Business object if need)for all pages used in scenario

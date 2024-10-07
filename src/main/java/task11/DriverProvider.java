@@ -8,7 +8,9 @@ public class DriverProvider {
     static WebDriver driver;
     public static WebDriver initDriver() {
         ChromeDriverManager.getInstance().setup();
-        return new ChromeDriver();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        return driver;
     }
 
     public static WebDriver getDriver() {
