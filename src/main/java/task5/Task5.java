@@ -29,7 +29,7 @@ public class Task5 {
         System.out.println("JSON before: " + data.toString());
 
         data.setAge(29);
-        System.out.println("JSON after: " + data.toString());
+        System.out.println("JSON after: " + data);
 
         try {
             objectMapper.writeValue(new File("/Users/user/Desktop/ITStep/IT STEP 4 course/AQA/Tasks/src/main/resources/output.json"), data);
@@ -48,7 +48,7 @@ public class Task5 {
 
         System.out.println("XML before: " + data.toString());
         data.setAge(29);
-        System.out.println("XML after: " + data.toString());
+        System.out.println("XML after: " + data);
 
         try {
             xmlMapper.writeValue(new File("/Users/user/Desktop/ITStep/IT STEP 4 course/AQA/Tasks/src/main/resources/output.xml"), data);
