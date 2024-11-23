@@ -1,20 +1,21 @@
-package task6;
+package task7;
 
-
-import org.hibernate.annotations.Entity;
-import org.hibernate.annotations.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(appliesTo = "number")
+@Table(name = "number")
 public class Number {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
     private Long id;
+
     @Column
     private Integer value;
+
     @Column
     private String description;
+
+    // Гетери і сетери
 
     public Long getId() {
         return id;

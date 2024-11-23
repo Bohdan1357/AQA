@@ -17,33 +17,33 @@ public class Task6 {
         // Create
         session.beginTransaction();
         Data data = new Data();
-        data.setAge(42);
-        data.setName("Bohdan");
+        data.setAge(18);
+        data.setName("Oleg");
         Long dataId = (Long) session.save(data);
 
         Data data1 = new Data();
-        data1.setAge(29);
-        data1.setName("Alice");
+        data1.setAge(20);
+        data1.setName("Anna");
         Long dataId1 = (Long) session.save(data1);
 
         Data data2 = new Data();
-        data2.setAge(22);
-        data2.setName("Greg");
+        data2.setAge(25);
+        data2.setName("Sam");
         Long dataId2 = (Long) session.save(data2);
 
         Number number = new Number();
-        number.setValue(13);
-        number.setDescription("Friday 13th");
+        number.setValue(15);
+        number.setDescription("November 13th");
         Long numberId = (Long) session.save(number);
 
         Number number1 = new Number();
-        number1.setValue(24);
-        number1.setDescription("August 24th");
+        number1.setValue(23);
+        number1.setDescription("September 23th");
         Long numberId1 = (Long) session.save(number1);
 
         Number number2 = new Number();
-        number2.setValue(5);
-        number2.setDescription("November 5th");
+        number2.setValue(19);
+        number2.setDescription("August 5th");
         Long numberId2 = (Long) session.save(number2);
 
         session.getTransaction().commit();

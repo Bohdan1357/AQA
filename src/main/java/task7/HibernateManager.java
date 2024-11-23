@@ -1,12 +1,10 @@
-package task6;
+package task7;
 
-import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class HybernateManager {
+public class HibernateManager {
     private static SessionFactory sessionFactory;
-
     static {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
