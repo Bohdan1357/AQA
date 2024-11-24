@@ -1,29 +1,25 @@
 package task6;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table
-
+@Table(name = "data")
 public class Data {
-//<data>
-//  <name>Michael</name>
-//  <age>28</age>
-//  <favoriteNumbers>
-//      <number>7</number>
-//      <number>13</number>
-//      <number>19</number>
-//  </favoriteNumbers>
-//</data>
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column
     private String name;
+
     @Column
     private Integer age;
-//private List<Number> favoriteNumbers
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "data_id")
+    private List<Number> favoriteNumbers;
 
     public Long getId() {
         return id;
@@ -49,12 +45,21 @@ public class Data {
         this.age = age;
     }
 
+    public List<Number> getFavoriteNumbers() {
+        return favoriteNumbers;
+    }
+
+    public void setFavoriteNumbers(List<Number> favoriteNumbers) {
+        this.favoriteNumbers = favoriteNumbers;
+    }
+
     @Override
     public String toString() {
         return "Data{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", age='" + age + '\'' +
+                ", age=" + age +
+                ", favoriteNumbers=" + favoriteNumbers +
                 '}';
     }
 }

@@ -1,11 +1,9 @@
 package task6;
 
-
-import org.hibernate.annotations.Entity;
-import org.hibernate.annotations.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(appliesTo = "number")
+@Table(name = "number")
 public class Number {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

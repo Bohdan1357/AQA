@@ -1,13 +1,11 @@
 package task7;
 
-import org.hibernate.annotations.Entity;
-import org.hibernate.annotations.Table;
-
 import javax.persistence.*;
 
 @Entity
 @Table(name = "profile")
 public class Profile {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,11 +15,6 @@ public class Profile {
 
     @Column
     private String phoneNumber;
-
-    @OneToOne(mappedBy = "profile")
-    private Data data;
-
-    // Гетери і сетери
 
     public Long getId() {
         return id;
@@ -45,14 +38,6 @@ public class Profile {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-    }
-
-    public Data getData() {
-        return data;
-    }
-
-    public void setData(Data data) {
-        this.data = data;
     }
 
     @Override

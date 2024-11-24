@@ -9,7 +9,6 @@ public class Data {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
     private Long id;
 
     @Column
@@ -18,18 +17,18 @@ public class Data {
     @Column
     private Integer age;
 
-    @OneToMany
-    @JoinColumn(name = "data_id")  // Зв'язок із Hobby
-    private List<Hobby> hobbies;
+    @OneToOne
+    @JoinColumn(name = "profile_id")
+    private Profile profile;
 
     @ManyToMany
     @JoinTable(
-            name = "data_numbers",
+            name = "data_number",
             joinColumns = @JoinColumn(name = "data_id"),
-            inverseJoinColumns = @JoinColumn(name = "number_id"))
+            inverseJoinColumns = @JoinColumn(name = "number_id")
+    )
     private List<Number> favoriteNumbers;
 
-    // Гетери та сетери
     public Long getId() {
         return id;
     }
@@ -54,12 +53,12 @@ public class Data {
         this.age = age;
     }
 
-    public List<Hobby> getHobbies() {
-        return hobbies;
+    public Profile getProfile() {
+        return profile;
     }
 
-    public void setHobbies(List<Hobby> hobbies) {
-        this.hobbies = hobbies;
+    public void setProfile(Profile profile) {
+        this.profile = profile;
     }
 
     public List<Number> getFavoriteNumbers() {
@@ -76,7 +75,7 @@ public class Data {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
-                ", hobbies=" + hobbies +
+                ", profile=" + profile +
                 ", favoriteNumbers=" + favoriteNumbers +
                 '}';
     }

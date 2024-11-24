@@ -1,73 +1,64 @@
-//General:
-//        Implement OneToOne, OneToMany, and ManyToMany relations in your models from the previous task.(Task_6)
-//        Test it by CRUD.
-
 package task7;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class Task7 {
     public static void main(String[] args) {
-        // Створення SessionFactory та сесії
-        SessionFactory factory = new Configuration()
-                .configure("hibernate.cfg.xml")
-                .addAnnotatedClass(Data.class)
-                .addAnnotatedClass(Hobby.class)
-                .addAnnotatedClass(Number.class)
-                .buildSessionFactory();
+        Session session = HibernateManager.getSessionFactory().openSession();
 
-        Session session = factory.getCurrentSession();
+        // Create
+        session.beginTransaction();
 
-        try {
-            // Створення нових об'єктів Number
-            Number number1 = new Number();
-            number1.setValue(7);
-            Number number2 = new Number();
-            number2.setValue(11);
+        Profile profile1 = new Profile();
+        profile1.setAddress("Kyiv, Ukraine");
+        profile1.setPhoneNumber("+380123456789");
+        session.save(profile1);
 
-            // Створення списку Number
-            List<Number> numbers = new ArrayList<>();
-            numbers.add(number1);
-            numbers.add(number2);
+        Data data1 = new Data();
+        data1.setName("Oleg");
+        data1.setAge(30);
+        data1.setProfile(profile1);
+        session.save(data1);
 
-            // Збереження об'єктів Number
-            session.beginTransaction();
-            session.save(number1);
-            session.save(number2);
-            session.getTransaction().commit();
+        Number number1 = new Number();
+        number1.setValue(15);
+        number1.setDescription("Lucky Number");
+        session.save(number1);
 
-            // Створення нових об'єктів Hobby
-            Hobby hobby1 = new Hobby();
-            hobby1.setName("Football");
-            Hobby hobby2 = new Hobby();
-            hobby2.setName("Reading");
+        Number number2 = new Number();
+        number2.setValue(23);
+        number2.setDescription("Favorite Day");
+        session.save(number2);
 
-            // Створення списку Hobby
-            List<Hobby> hobbies = new ArrayList<>();
-            hobbies.add(hobby1);
-            hobbies.add(hobby2);
+        data1.setFavoriteNumbers(new ArrayList<>());
+        data1.getFavoriteNumbers().add(number1);
+        data1.getFavoriteNumbers().add(number2);
+        session.update(data1);
 
-            // Створення об'єкта Data
-            Data data = new Data();
-            data.setName("John Doe");
-            data.setAge(30);
-            data.setHobbies(hobbies);
-            data.setFavoriteNumbers(numbers);
+        session.getTransaction().commit();
 
-            // Збереження об'єкта Data
-            session = factory.getCurrentSession();
-            session.beginTransaction();
-            session.save(data);  // Збереження Data, тепер посилання на Number збережено
-            session.getTransaction().commit();
+        // Read
+        Data readData = session.get(Data.class, data1.getId());
+        System.out.println("Read Data: " + readData);
 
-            System.out.println("Data saved successfully: " + data);
-        } finally {
-            factory.close();
-        }
+        // Update
+        session.beginTransaction();
+        readData.setAge(35);
+        session.update(readData);
+        session.getTransaction().commit();
+
+        // Delete
+        session.beginTransaction();
+        readData.getFavoriteNumbers().clear();
+        session.update(readData);
+        session.delete(readData);
+        session.getTransaction().commit();
+
+        // Check if deleted
+        Data deletedData = session.get(Data.class, data1.getId());
+        System.out.println("Deleted Data (should be null): " + deletedData);
+
+        HibernateManager.shutdown();
     }
 }
