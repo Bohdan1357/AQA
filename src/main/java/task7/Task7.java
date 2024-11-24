@@ -1,3 +1,6 @@
+//Implement OneToOne, OneToMany, and ManyToMany relations in your models from the previous task.(Task_6)
+//Test it by CRUD.
+
 package task7;
 
 import org.hibernate.Session;
