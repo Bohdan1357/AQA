@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Task8Suite">
+    <test name="Task8Test">
+        <parameter name="testArray" value="itworksfinally"/>
+        <classes>
+            <class name="task8.Task8Test"/>
+        </classes>
+    </test>
+</suite>
