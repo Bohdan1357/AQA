@@ -5,20 +5,24 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DriverProvider {
-    WebDriver driver;
-    public static final DriverProvider INSTANCE = new DriverProvider();
+    static WebDriver driver;
+    public static WebDriver initDriver() {
+        WebDriverManager.chromedriver().setup();
+        return new ChromeDriver();
+    }
 
-    public WebDriver getDriver() {
+    public static WebDriver getDriver() {
+        if (driver == null) {
+            driver = initDriver();
+        }
+        driver.manage().window().maximize();
         return driver;
     }
 
-    private DriverProvider() {
-        setUp();
-    }
-
-    public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+    public static void quitDriver() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
+        }
     }
 }
