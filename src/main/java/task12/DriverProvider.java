@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DriverProvider {
-    static WebDriver driver;
+    public static WebDriver driver;
     public static WebDriver initDriver() {
         WebDriverManager.chromedriver().setup();
         return new ChromeDriver();

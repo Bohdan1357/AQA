@@ -6,10 +6,13 @@
 package task11;
 
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import task14.AllureListener;
 
 import static task11.DriverProvider.driver;
 
+@Listeners({AllureListener.class})
 public class Task11Test {
     @Test
     void addRowTest(){

@@ -1,0 +1,44 @@
+2024-12-14 16:40:53 INFO  CustomTest13Listener - info message
+2024-12-14 16:40:53 INFO  CustomTest13Listener - info message
+2024-12-14 16:46:51 INFO  CustomTest13Listener - Task13Test started
+2024-12-14 16:46:51 INFO  CustomTest13Listener - Task13Test started
+2024-12-14 16:50:34 INFO  CustomTest13Listener - Task13Test startedselectOptionByIndexTest
+2024-12-14 16:50:34 INFO  CustomTest13Listener - Task13Test startedselectOptionByValueTest
+2024-12-14 17:00:39 INFO  CustomTest13Listener - Started selectOptionByIndexTest
+2024-12-14 17:00:39 INFO  CustomTest13Listener - Started selectOptionByValueTest
+2024-12-14 17:01:47 INFO  CustomTest13Listener - Started selectOptionByIndexTest
+2024-12-14 17:01:47 INFO  CustomTest13Listener - Started selectOptionByValueTest
+2024-12-14 17:01:48 ERROR CustomTest13Listener - Test failed: selectOptionByValueTest
+2024-12-14 17:01:48 INFO  CustomTest13Listener - Saved HTML source to file: selectOptionByValueTest_20241214_170148_72e7d90e-3fe7-46f8-8c7b-5df8dc121834.html
+2024-12-14 18:19:59 INFO  CustomTest13Listener - Test Suite Started: Default Suite
+2024-12-14 18:20:15 INFO  CustomTest13Listener - Started selectOptionByIndexTest
+2024-12-14 18:20:17 INFO  CustomTest13Listener - Started selectOptionByValueTest
+2024-12-14 18:20:18 INFO  CustomTest13Listener - Test Suite Finished: Default Suite
+2024-12-14 19:10:39 INFO  CustomTest13Listener - Test Suite Started: Task13Suite
+2024-12-14 19:10:50 INFO  CustomTest13Listener - Started selectOptionByIndexTest
+2024-12-14 19:10:50 INFO  CustomTest13Listener - Started selectOptionByValueTest
+2024-12-14 19:10:51 INFO  CustomTest13Listener - Started selectOptionByValueTestFailure
+2024-12-14 19:10:51 ERROR CustomTest13Listener - Test failed: selectOptionByValueTestFailure
+2024-12-14 19:10:51 INFO  CustomTest13Listener - Saved HTML source to file: selectOptionByValueTestFailure_20241214_191051_689e8172-ef86-4777-b673-cfe403d10a96.html
+2024-12-14 19:10:51 INFO  CustomTest13Listener - Test Suite Finished: Task13Suite
+2024-12-14 20:33:17 INFO  CustomTest13Listener - Test Suite Started: Task13Suite
+2024-12-14 20:33:29 INFO  CustomTest13Listener - Started selectOptionByIndexTest
+2024-12-14 20:33:29 INFO  CustomTest13Listener - Started selectOptionByValueTest
+2024-12-14 20:33:29 INFO  CustomTest13Listener - Started selectOptionByValueTestFailure
+2024-12-14 20:33:29 ERROR CustomTest13Listener - Test failed: selectOptionByValueTestFailure
+2024-12-14 20:33:29 INFO  CustomTest13Listener - Saved HTML source to file: selectOptionByValueTestFailure_20241214_203329_487a2acf-4d7e-4847-b000-9444ffb40ed8.html
+2024-12-14 20:33:30 INFO  CustomTest13Listener - Test Suite Finished: Task13Suite
+2024-12-14 20:44:09 INFO  CustomTest13Listener - Test Suite Started: Task13Suite
+2024-12-14 20:44:18 INFO  CustomTest13Listener - Started selectOptionByIndexTest
+2024-12-14 20:44:19 INFO  CustomTest13Listener - Started selectOptionByValueTest
+2024-12-14 20:44:19 INFO  CustomTest13Listener - Started selectOptionByValueTestFailure
+2024-12-14 20:44:19 ERROR CustomTest13Listener - Test failed: selectOptionByValueTestFailure
+2024-12-14 20:44:19 INFO  CustomTest13Listener - Saved HTML source to file: test_failure_html\selectOptionByValueTestFailure_20241214_204419_2593008c-fa0b-4102-862a-d876ea43759c.html
+2024-12-14 20:44:19 INFO  CustomTest13Listener - Test Suite Finished: Task13Suite
+2024-12-14 20:49:31 INFO  CustomTest13Listener - Test Suite Started: Task13Suite
+2024-12-14 20:49:40 INFO  CustomTest13Listener - Started selectOptionByIndexTest
+2024-12-14 20:49:41 INFO  CustomTest13Listener - Started selectOptionByValueTest
+2024-12-14 20:49:41 INFO  CustomTest13Listener - Started selectOptionByValueTestFailure
+2024-12-14 20:49:41 ERROR CustomTest13Listener - Test failed: selectOptionByValueTestFailure
+2024-12-14 20:49:41 INFO  CustomTest13Listener - Saved HTML source to file: test_failure_html\selectOptionByValueTestFailure_20241214_204941_b53f4b8a-8658-4602-bbfb-44fcd6c200d1.html
+2024-12-14 20:49:42 INFO  CustomTest13Listener - Test Suite Finished: Task13Suite
