@@ -18,7 +18,7 @@ import org.testng.annotations.*;
 import task12.DriverProvider;
 import task12.MS_BO;
 
-import static org.junit.Assert.assertEquals;
+import static org.testng.AssertJUnit.assertEquals;
 
 @Listeners(CustomTest13Listener.class)
 public class Task13Test {

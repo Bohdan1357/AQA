@@ -1,1 +1,0 @@
-{"uuid":"2f8b3b47-830b-4981-91d0-30b076df83c0","name":"task11.Task11Test","children":["d8c1e720-2137-49af-8b6c-b5bc30712f6c"],"befores":[],"afters":[{"name":"closeWindow","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1732655900980,"stop":1732655901179}],"start":1732655871025,"stop":1732655901189}
